@@ -3,7 +3,7 @@
 
     <nav aria-label="breadcrumb">
         <ol class="breadcrumb">
-        <li class="breadcrumb-item active" aria-current="page">כאן תוכלו להנות ממגוון דוחות</li>
+        <li class="breadcrumb-item active" aria-current="page">Here you can see variety of reports</li>
         </ol>
     </nav>
      <div class="content-section">
@@ -55,11 +55,22 @@
             </div>
             <div class="tab-pane fade show  active" id="stats_reports" role="tabpanel" aria-labelledby="stats-reports-tab">
                 <div>
-                    Amount posts: {{ amount_posts }}
-                    <br>
-                    Amount users: {{ amount_users }}
-                    <br>
-                    Amount pet coins: {{ amount_pet_coint }}
+                        <table class="table table-striped">
+                            <thead>
+                            <tr>
+                                    <th scope="col">Amount posts:</th>
+                                    <th scope="col">Amount users:</th>
+                                    <th scope="col">Amount pet coins:</th>
+                            </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                        <td>{{ amount_posts }}</td>
+                                        <td>{{ amount_users }}</td>
+                                        <td>{{ amount_pet_coint }}</td>
+                                </tr>
+                            </tbody>
+                        </table>
                 </div>
             </div>
             <div class="tab-pane fade show" id="buisnesses" role="tabpanel" aria-labelledby="post-reports-tab">
@@ -84,6 +95,9 @@
             </div>
         </div>
     </div>
-    <input class="" type="button" value="Print this page" onClick="window.print()">
+    <br>
+    <div  align="center" >
+    <input class="btn btn-primary" type="button" value="Print this page" onClick="window.print()">
+    </div>
     </div>
 {% endblock content %}

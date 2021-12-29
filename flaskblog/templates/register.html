@@ -2,17 +2,16 @@
 {% block content %}
 <div class="content-section">
     <form method="POST" action="">
-      <legend class="border-bottom mb-4">הרשמה</legend>
-      <p>בחר משתמש המזוהה איתך</p>
+      <legend class="border-bottom mb-4">Register</legend>
+      <p>Choose profile</p>
         <br>
-        
-        <a class="btn btn-outline-info" href="{{ url_for('registeruser') }}">משתמש רגיל</a>
-        <br>
-        <br>
-        <a class="btn btn-outline-info" href="{{ url_for('registerbus') }}">בעל עסק</a>
+        <a class="btn btn-outline-info" href="{{ url_for('registeruser') }}">User</a>
         <br>
         <br>
-        <a class="btn btn-outline-info" href="{{ url_for('registerasos') }}">אגודה\עמותה</a>
+        <a class="btn btn-outline-info" href="{{ url_for('registerbus') }}">Business owner</a>
+        <br>
+        <br>
+        <a class="btn btn-outline-info" href="{{ url_for('registerasos') }}">Associations</a>
       
     </form>
 </div>  
